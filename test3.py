@@ -92,3 +92,17 @@ login={"name":"lp","sex":"man","age":18}
 for k,v in login.items():
     print(k,v)
 '''
+#模块
+''''
+import sys
+for i  in sys.argv:
+    print(i)
+print("directory path:",sys.path)
+from mode import Max,Min
+Max(1,2)
+Min(1,2)
+'''
+if __name__=="__main__":
+    print("ourself
+else:
+    print("other")
