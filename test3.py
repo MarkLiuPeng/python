@@ -101,8 +101,25 @@ print("directory path:",sys.path)
 from mode import Max,Min
 Max(1,2)
 Min(1,2)
-'''
+
 if __name__=="__main__":
     print("ourself
 else:
     print("other")
+'''
+#格式输入和输出方法
+#str='python'
+#print(repr(str))
+#print('{}source"{}salary"'.format("code",3000))
+#dict={"name":"lp","sex":"man","age":18}
+#print('name:{name:s};sex:{sex:s};age:{age:d}'.format(**dict))
+'''
+import math
+print("The Roud is%5.3f"%math.pi)
+'''
+#文件查看
+file=open('1.txt','rb') #二进制权限位
+#file.write('123abc')
+print(file.seek(-3,2))
+#file.write("Python is yunwei enginer tools")
+file.close()
