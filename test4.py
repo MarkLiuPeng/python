@@ -115,8 +115,6 @@ test.sum()
 
 print(test.__ssum)
 print(test.psum)
-'''
-
 class Myclass:
     def __init__(self,name,url):
         self.name=name
@@ -134,3 +132,16 @@ test=Myclass("baidu","www.baidu.com")
 test.who()
 test.get()
 test.__get()
+'''
+#运算符重载
+class Myclass:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __str__(self):
+        return 'pow (%d,%d)'%(self.x,self.y)
+    def __add__(self,other):
+        return Myclass(self.x+other.x,self.y+other.y)
+test1=Myclass(10,20)
+test2=Myclass(1,10)
+print(test1+test2)
