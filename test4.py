@@ -36,6 +36,7 @@ class Test:
 t=Test()
 t.prt()
 '''
+'''
 #父类
 class  People:
     name=''         #类基本属性
@@ -59,9 +60,29 @@ class Student(People):
         print("%s说：我%d岁和性别%s我的分数是%d."%(self.name,self.age,self.sex,self.score))
 
 
-x=Student("lp",18,"man",100)
+#另一个继承类
+class speak():
+    title=''
+    name=''
+    def __init__(self,n,t):
+        self.name=n
+        self.title=t
+    def speak(self):
+        print("我叫:%s正在学习%s语言"%(self.name,self.title))
+#多继类方法
+class sample(speak,Student):
+    a=''
+    def __init__(self,n,a,s,S,t):
+        Student.__init__(self,n,a,s,S)
+        speak.__init__(self,n,t)
+
+
+x=sample("lp",18,"man",100,"python")
+#x=Student("lp",18,"man",100)
 x.speak()
 
+
+'''
 '''
 class Myclass:
     def __init__(self): #构造方法
@@ -69,3 +90,47 @@ class Myclass:
 
 x=Myclass()
 '''
+'''
+class Parent:
+    def test(self):
+        print("Parent Class")
+class Son(Parent):
+    def test(self):
+        print("Son Class")
+x=Son()
+x.test()
+super(Son, x).test()        #重写
+
+class Myclass:
+    __ssum=0  #私有变量
+    psum=0      #公开变量
+    def sum(self):
+        self.__ssum+=1
+        self.psum+=1
+        print(self.__ssum)
+
+test=Myclass()
+test.sum()
+test.sum()
+
+print(test.__ssum)
+print(test.psum)
+'''
+
+class Myclass:
+    def __init__(self,name,url):
+        self.name=name
+        self.__url=url
+    def who(self):
+        print("name:",self.name)
+        print("url:",self.__url)
+    def __get(self):  #私有方法
+        print("s")
+    def get(self):     #公有方法
+        print("p")
+        self.__get()
+
+test=Myclass("baidu","www.baidu.com")
+test.who()
+test.get()
+test.__get()
