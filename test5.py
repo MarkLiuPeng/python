@@ -29,11 +29,30 @@ for x in range(2,10):
         continue
     else:
         print('a j number:',x)
-
-'''
 class Myclass:
     def Fun(self,*args):
         pass    #占位
 
 test=Myclass()
 test.Fun()
+def Fun(a,list=[]):
+    list.append(a)
+    return list
+
+for i in range(10):
+    print(Fun(i))
+def Fun():
+    """Document"""
+    pass    #文档字符串
+print(Fun.__doc__)
+                    #函数注解
+def Fun(age:18,num:int='test') -> "Funtion example":
+    print("",Fun.__annotations__)
+    print("",age,num)x`
+Fun("test")
+'''
+
+list=[]
+lists=[input()]
+list.extend(list)
+print(list)
