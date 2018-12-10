@@ -3,6 +3,7 @@
  #-*- coding:encoding -*-
 #编码
 '''
+
 '''
 import re
 print('python lanuange'.replace('python','shell'))
@@ -62,7 +63,7 @@ from collections import deque
 list=deque(['python','java','shell'])
 list.append('c')
 list.append('html')
-list.popleft()a
+list.popleft()
 list.popleft()
 print(list)
 list=['a','b',1]
@@ -75,3 +76,7 @@ print(x | y ,x ^ y)
 #print(dict([('name','lp'),('sex','man'),('age',18)]))
 #dict={x:x*2 for x in range(10)}
 print(dict(name='lp',sex='man',age=18))
+'''
+import test6
+print(test6.__name__)
+test6.IjFun()
