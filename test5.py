@@ -50,9 +50,28 @@ def Fun(age:18,num:int='test') -> "Funtion example":
     print("",Fun.__annotations__)
     print("",age,num)x`
 Fun("test")
-'''
-
 list=[]
 lists=[input()]
 list.extend(list)
 print(list)
+list=[1,2,3]
+list.append(4)  #堆栈列表
+print(list)
+print(list.pop(),list.pop(),list)      #释放列表
+from collections import deque
+list=deque(['python','java','shell'])
+list.append('c')
+list.append('html')
+list.popleft()a
+list.popleft()
+print(list)
+list=['a','b',1]
+del list[1:2]
+print(list)
+x=set('abcde')
+y=set('aadg')
+print(x | y ,x ^ y)
+    #序列化字典
+#print(dict([('name','lp'),('sex','man'),('age',18)]))
+#dict={x:x*2 for x in range(10)}
+print(dict(name='lp',sex='man',age=18))
