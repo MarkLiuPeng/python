@@ -134,6 +134,7 @@ test.get()
 test.__get()
 '''
 #运算符重载
+'''
 class Myclass:
     def __init__(self,x,y):
         self.x=x
@@ -145,3 +146,30 @@ class Myclass:
 test1=Myclass(10,20)
 test2=Myclass(1,10)
 print(test1+test2)
+class Myclass:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def __str__(self):
+        return("He is %s and %d years old:"%(self.name,self.age))
+
+test=Myclass("lp",18)
+print(test)
+'''
+#类方法
+class Myclass:
+    @staticmethod   #静态修饰器
+    def Fun():
+        print("静态方法")
+    @classmethod       #类修饰器
+    def a(cls):
+        print("类方法")
+    def b(Self):
+        print("普通方法")
+
+Myclass.Fun()
+Myclass.a()
+test=Myclass()
+test.Fun()
+test.a()
+test.b()
