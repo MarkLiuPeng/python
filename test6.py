@@ -105,9 +105,22 @@ def Fun(i,j):
 Fun(4,2)
 Fun(4,0)
 Fun("4","2")
-'''
 #预定义清理行为
+import sys
+sys.exit()      #退出
 with open('1.txt') as file:
     #print(file.closed)
     for content in file:
         print(content)
+while True:
+    try:
+        num=float(input("num:"))
+        if num==0:
+            print("num equal zero")
+        elif num<0:
+            print("num  letter 0")
+        else:
+            print("num granter 0")
+            break
+    except ValueError:          #触发异常
+        print("not is useful num")
