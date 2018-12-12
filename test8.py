@@ -106,7 +106,6 @@ def test():
     time.sleep(3)
     print("test1")
 test()
-"""
 def explain(func):
     def warrper(*args,**kwargs):
         #不带参数的修饰器
@@ -124,4 +123,49 @@ def test(x,y,z):
     return(2)
 test('b','a',z='c')
 
+list=[] #空列表
+for i in range(10):
+    list.append(i)   #向列表里添加元素
+print(list)
+"""
+#生成器
+#列表生成式生成
+"""
+test=(n for n in range(10) if n%2==0)
+print(type(test),'\n',test)
+print(test.__next__(),test.__next__())
+#访问生成器:__next__
+def Fun(max):
+    a,b,n=0,1,0
+    while n<max:
+        yield b
+        a,b=b,a+b
+        n=n+1
+    return ("none")
+test=Fun(5)
+#访问生成器:for
+""""""
+while True:
+    try:
+        x=test.__next__()
+        print(x)
+    except StopIteration as e:     #捕获异常
+        print("happend",e.value)
+        break
 
+"""
+def Fun():
+    for i in range(10):
+        if i%2==0:
+            yield i    #通过函数构造
+print(type(Fun()))
+print(Fun())
+"""
+
+
+
+
+
+
+#class TestWarrper(TestCase):
+#    pass
