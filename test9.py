@@ -1,11 +1,10 @@
-#from unittest import TestCase
-list=[] #空列表
-for i in range(10):
-    list.apped(i)   #向列表里添加元素
-print(list)
+def example(name):
+    print("%s"%name)
+    while True:
+        role=yield
+        print("he is %s and name is %s"%(role,name))
 
-
-
-
-#class TestWarrper(TestCase):
-#    pass
+x=example("hzs")
+print(x.__next__())
+print(x.send("boss"))
+x.send("worker")

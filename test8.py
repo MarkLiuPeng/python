@@ -144,7 +144,7 @@ def Fun(max):
     return ("none")
 test=Fun(5)
 #访问生成器:for
-""""""
+
 while True:
     try:
         x=test.__next__()
@@ -153,17 +153,24 @@ while True:
         print("happend",e.value)
         break
 
-"""
 def Fun():
     for i in range(10):
         if i%2==0:
             yield i    #通过函数构造
 print(type(Fun()))
 print(Fun())
-"""
 
 
+def example(name):
+    print("%s"%name)
+    while True:
+        role=yield
+        print("he is %s and name is %s"%(role,name))
 
+x=example("hzs")
+print(x.__next__())
+print(x.send("boss"))
+x.send("worker")
 
 
 
